@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const themeSwitcher = document.querySelector('.theme-switcher');
 

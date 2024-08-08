@@ -13,7 +13,6 @@ a {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: #403F3D;
 }
 
 ul,
@@ -32,20 +31,22 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: normal;
-    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-family: "Epilogue", sans-serif;
+    line-height: 120%;
+    letter-spacing: -3%;
 }
 
 html,
 body {
     line-height: 150%;
-    font-weight: normal;
     font-size: 24px;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    background: #311F1F;
+    background: #272020;
+    line-height: 150%;
+    letter-spacing: -3%;
 }
-
 
 html {
     height: 100%;
@@ -53,13 +54,30 @@ html {
     scroll-behavior: smooth; 
 }
 
-/* Header ------------------------------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: #583D3B;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #272020;
+}
+
+::selection {
+    background: #583D3B;
+    color: #ffffff;
+}
+
+/* Header ------------------------------------------------------------------------------------*/
 .header {
     position: fixed;
     width: 100%;
     align-items: center;
-    z-index: 4;
+    z-index: 6;
 }
 
 .nav {
@@ -96,8 +114,8 @@ html {
     width: 190px;
     height: 45px;
     font-size: 24px;
-    background-color: #FDE992; 
-    color: #311F1F;
+    background-color: #FDEA98; 
+    color: #272020;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -122,7 +140,6 @@ html {
 }
 
 /* Section cover ------------------------------------------------------------------------------------*/
-
 .cover {
     position: relative;
     height: 803px;
@@ -160,7 +177,7 @@ html {
     z-index: 3;
 }
 
-.overlay {
+.overlay-cover {
     position: absolute;
     top: 300px;
     right: 15%;
@@ -168,7 +185,7 @@ html {
     padding-left: 5%;
 }
 
-.overlay img {
+.overlay-cover img {
     max-width: 100%;
     height: auto;
 }
@@ -196,7 +213,7 @@ html {
 }
 
 .get-app-button:hover {
-    background-color: #FDE992;
+    background-color: #FDEA98;
     animation: 3s;
 }
 
@@ -208,9 +225,9 @@ html {
     transform: translate(-50%, -50%);
     width: 260px;
     height: 190px;
-    background-color: white;
+    background-color: #ffffff;
     color: #000000;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px #0000004d;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
@@ -233,6 +250,50 @@ html {
     display: none;
 }
 
+/* Section about ------------------------------------------------------------------------------------*/
+.about {
+    margin-top: 70px;
+}
+
+.about-image {
+    position: relative;
+    width: 100%;
+    height: 803px;
+    background-image: url('assets/img/about-block/about-cover.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-position 0.5s ease;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 875px;
+    z-index: 4;
+    padding: 0 40px;
+    max-width: 640px;
+    background-color: #272020;
+    height: 307px;
+    border-radius: 40px;
+}
+
+.about-heading {
+    margin-bottom: 20px;
+}
+
+.about-text-1 {
+    margin-bottom: 10px;
+}
+
+.overlay-about {
+    position: absolute;
+    top: 310px;
+    z-index: 4;
+    left: 60%;
+}
+
 /* Media ------------------------------------------------------------------------------------*/
 @media screen and (max-width: 350px) {
     .nav {
@@ -247,14 +308,27 @@ html {
 }
 
 @media screen and (max-width: 500px) {
+    html,
+    body {
+    font-size: 18px;
+    }
+
     .get-app-mini {
         width: 110px;
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 15px;
     }
 
     .theme-switcher {
         margin-left: 15px;
+    }
+
+    .about-info {
+        height: 240px;
+    }
+
+    .overlay-about {
+        left: 8%;
     }
 }
 
@@ -267,8 +341,17 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    .overlay {
+    .overlay-cover {
         right: 7%;
+    }
+
+    .overlay-about {
+        margin-right: 40px;
+    }
+
+    .overlay-about img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -311,6 +394,17 @@ html {
     .get-app-button {
         left: 68%;
     }
+
+    .overlay-about {
+        left: 20%;
+    }
+}
+
+
+@media screen and (max-width: 1180px) {
+    .overlay-about {
+        left: 10%;
+    }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1240px) {
@@ -324,5 +418,11 @@ html {
 
     .get-app-button {
         left: 75%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .about-image {
+        background-position: 10% center;
     }
 }
