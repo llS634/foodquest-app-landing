@@ -5,57 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodquest</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="logo">
+                    <a href="index.html">
+                        <img class="big-logo" src="assets/icon/header_block/logo.svg" alt="Logo Foodquest">
+                        <img class="mini-logo" src="assets/icon/header_block/mini-logo.svg" alt="Mini logo Foodquest">
+                    </a>
+                </li>
 
-<header class="header">
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="logo">
-                <a href="index.html">
-                    <img class="big-logo" src="assets/icon/header_block/logo.svg" alt="Logo Foodquest">
-                    <img class="mini-logo" src="assets/icon/header_block/mini-logo.svg" alt="Mini logo Foodquest">
-                </a>
-            </li>
+                <li class="navbar-buttons">
+                    <button class="get-app-mini">Get the app</button>
 
-            <li class="navbar-buttons">
-                <button class="get-app-mini">Get the app</button>
+                    <button class="theme-switcher" onclick="toggleTheme()">
+                        <img id="theme-icon" src="assets/icon/header_block/color-theme-dark.svg" alt="Color Theme">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-                <button class="theme-switcher" onclick="toggleTheme()">
-                    <img id="theme-icon" src="assets/icon/header_block/color-theme-dark.svg" alt="Color Theme">
-                </button>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <main class="main">
+        <div class="cover">
+            <div class="layer layer1"></div>
+            <div class="layer layer2"></div>
+            <div class="layer layer3"></div>
 
-<main class="main">
-    <div class="cover">
-        <div class="layer layer1"></div>
-        <div class="layer layer2"></div>
-        <div class="layer layer3"></div>
+            <div class="overlay-cover">
+                <img class="image-default" src="assets/img/cover_block/img-person/img-button.svg" alt="Overlay Cover Image">
+                <img class="image-770" src="assets/img/cover_block/img-person/img-button-4.svg" alt="Overlay Cover Image 770px">
+                <img class="image-1000" src="assets/img/cover_block/img-person/img-button-3.svg" alt="Overlay Cover Image 1000px">
+                <img class="image-1240" src="assets/img/cover_block/img-person/img-button-2.svg" alt="Overlay Cover Image 1240px">
 
-         <div class="overlay">
-             <img id="overlay-image" class="image-default" src="assets/img/cover_block/img-person/img-button.svg" alt="Overlay Image">
-             <img class="image-770" src="assets/img/cover_block/img-person/img-button-4.svg" alt="Overlay Image 770px">
-             <img class="image-1000" src="assets/img/cover_block/img-person/img-button-3.svg" alt="Overlay Image 1000px">
-             <img class="image-1240" src="assets/img/cover_block/img-person/img-button-2.svg" alt="Overlay Image 1240px">
+                <button class="get-app-button">Get the App</button>
 
-             <button class="get-app-button">Get the App</button>
-
-             <div class="popup" id="popup">
-                <span class="close" id="close">&times;</span>
-                <p>The app itself is at the concept level</p>
+                <div class="popup" id="popup">
+                    <span class="close" id="close">&times;</span>
+                    <p>The app itself is at the concept level</p>
+                </div>
             </div>
-        
-         </div>
-    </div>
-</main>
+        </div>
 
-<footer>
+        <div class="about">
+            <div class="about-image"></div>
 
-</footer>
+            <div class="about-info">
+                <h1 class="about-heading">About</h1>
+
+                <div class="about-text">
+                    <p class="about-text-1">Foodquest - App for food lovers that turns reality into a game adventure.</p>
+                    <p class="about-text-2">Earn rewards for completing quests, find like-minded adventurers and learn about the local culture!</p>
+                </div>
+
+                <div class="overlay-about">
+                    <img class="image-default" src="assets/img/about-block/about-img-default.svg" alt="Overlay About Image">
+                    <img class="image-770" src="assets/img/about-block/about-img-770.svg" alt="Overlay About Image 770px">
+                    <img class="image-1000" src="assets/img/about-block/about-img-1000.svg" alt="Overlay About Image 1000px">
+                    <img class="image-1240" src="assets/img/about-block/about-img-default.svg" alt="Overlay About Image 1240px">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
